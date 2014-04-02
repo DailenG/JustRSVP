@@ -1,14 +1,19 @@
-<?php $code = $_GET['code'] ?>
+<?php
+$code = $_GET['code'];
+
+require('justrsvp.config.php');
+?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Sabrina and Dailen are Expecting!</title>
+  <title><?=$site_title?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/custom.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.webflow.css.php">
   <script type="text/javascript" src="js/modernizr.js"></script>
 
 </head>
@@ -17,7 +22,7 @@
     <div class="w-container content">
 	<!-- ############# CONTENT CONTAINER ############# -->
 	
-      <h1>Sabrina and Dailen are Expecting!</h1>
+      <h1><?=$site_title?></h1>
 
 		<?php
 		if($_GET['view'])
